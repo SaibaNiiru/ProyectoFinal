@@ -1,0 +1,48 @@
+@font-face{
+    font-family: "inter";
+    src: url("Inter-VariableFont_opsz,wght.ttf")
+}
+
+.imagenbienvenida{
+    font-family: inter;
+    width: 100%;
+    height: 720px;
+    background-image: url("assets\img\Nebulosa.png");
+    color: #F5F4FF;
+}
+
+
+
+.container{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+    height: 100vh;
+}
+
+.header{
+    grid-area: header;
+    width: 100%;
+    height: 96px;
+    background-color: #18172C;
+    color: white;
+}
+.nagevacion{
+    font-family: inter;
+    color: #A5ACC3;
+    
+}
+
+.main{
+    grid-area: main;
+}
+
+.footer{
+    grid-area: footer;
+    width: 100%;
+    height: 150px;
+    background-color: #272C40;
+}
