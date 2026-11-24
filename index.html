@@ -1,17 +1,254 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Akuvoid</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Akuvoid — Un universo por descubrir</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="container">
-        <header class="header">
-            <img src="assets\icons\iconoakuvoid.png" alt="icono" width="200px" height="39px">
+    <header class="encabezado">
+        <div class="encabezado-interno">
+            <a href="index.html" class="logo-sitio">
+                <img src="assets/icons/LogoAkuvoid.png" alt="Akuvoid">
+            </a>
+            <nav class="menu-nav" id="menuNav">
+                <a href="index.html" class="enlace-menu activo">Descubrir</a>
+                <a href="pages/Constelaciones.html" class="enlace-menu">Constelaciones</a>
+                <a href="pages/Estrellas.html" class="enlace-menu">Estrellas</a>
+                <a href="pages/SistemaSolar.html" class="enlace-menu">Sistema solar</a>
+                <a href="pages/GuiaDeObservacion.html" class="boton boton-suave">Guía de observación ↗</a>
+            </nav>
+            <button class="boton-hamburguesa" id="botonMenu" aria-label="Menú">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
 
-        </header>
-    </div>
+    <main>
+        <section class="portada">
+            <div class="fondo-portada">
+                <img src="assets/img/galaxy.jpg" alt="Galaxia">
+            </div>
+            <div class="caja-centrada">
+                <div class="contenido-portada">
+                    <p class="etiqueta">Un universo por descubrir</p>
+                    <h1 class="titulo-portada">Mira al cielo.<br>Descubre lo extraordinario.</h1>
+                    <p class="descripcion-portada">Cada estrella tiene una historia. Explora las constelaciones, conoce nuestro universo y empieza tu propio viaje cósmico.</p>
+                    <div class="botones-portada">
+                        <a href="pages/Constelaciones.html" class="boton boton-morado">Explorar el universo ↗</a>
+                        <a href="pages/GuiaDeObservacion.html" class="boton boton-borde">Aprende a observar →</a>
+                    </div>
+                </div>
+            </div>
+            <p class="nota-portada">El cosmos, más cerca</p>
+        </section>
+
+        <div class="caja-centrada">
+            <div class="fila-datos">
+                <div class="item-dato">
+                    <div class="numero-dato">88</div>
+                    <div class="texto-dato">constelaciones reconocidas</div>
+                </div>
+                <div class="item-dato">
+                    <div class="numero-dato">≈ 13.800 M</div>
+                    <div class="texto-dato">de años de historia cósmica</div>
+                </div>
+                <div class="item-dato">
+                    <div class="numero-dato">8</div>
+                    <div class="texto-dato">planetas en nuestro sistema</div>
+                </div>
+                <div class="item-dato">
+                    <div class="numero-dato">∞</div>
+                    <div class="texto-dato">preguntas por explorar</div>
+                </div>
+            </div>
+        </div>
+
+        <section class="seccion">
+            <div class="caja-centrada">
+                <h2 class="titulo-seccion">Historias escritas en las estrellas.</h2>
+                <p class="texto-gris">Las constelaciones son regiones del cielo. Sus figuras nos ayudan a orientarnos, aunque las estrellas que vemos juntas pueden estar muy lejos entre sí.</p>
+                <div class="rejilla-tarjetas">
+                    <article class="tarjeta">
+                        <img class="img-tarjeta" src="assets\img\Orión.png" alt="Orión">
+                        <p class="subtitulo-tarjeta">El cazador</p>
+                        <h3 class="titulo-tarjeta">Orión <span>↗</span></h3>
+                        <p class="texto-tarjeta">Busca las tres estrellas de su cinturón. Betelgeuse y Rigel marcan sus extremos.</p>
+                    </article>
+                    <article class="tarjeta">
+                        <img class="img-tarjeta" src="assets\img\Osa Mayor.png" alt="Osa Mayor">
+                        <p class="subtitulo-tarjeta">Una brújula natural</p>
+                        <h3 class="titulo-tarjeta">Osa Mayor <span>↗</span></h3>
+                        <p class="texto-tarjeta">El Gran Carro es parte de esta constelación. Sus estrellas ayudan a localizar la Polar.</p>
+                    </article>
+                    <article class="tarjeta">
+                        <img class="img-tarjeta" src="assets\img\Casiopea.png" alt="Casiopea">
+                        <p class="subtitulo-tarjeta">La reina del cielo</p>
+                        <h3 class="titulo-tarjeta">Casiopea <span>↗</span></h3>
+                        <p class="texto-tarjeta">Cinco estrellas brillantes forman su famosa W. Una figura ideal para empezar a reconocer el cielo.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion seccion-oscura">
+            <div class="caja-centrada">
+                <div class="dos-columnas">
+                    <div class="imagen-columna">
+                        <img src="assets/img/NacimientoEstrella.png" alt="Nebulosa">
+                    </div>
+                    <div>
+                        <h2 class="titulo-seccion">Toda estrella tiene una historia.</h2>
+                        <p class="texto-gris">Son enormes esferas de plasma que producen energía por fusión nuclear. Su masa marca el ritmo de su vida.</p>
+                        <div class="lista-pasos">
+                            <div class="paso">
+                                <span class="numero-paso">01</span>
+                                <div>
+                                    <p class="titulo-paso">Nacen en nebulosas</p>
+                                    <p class="texto-paso">La gravedad reúne gas y polvo hasta encender una estrella.</p>
+                                </div>
+                            </div>
+                            <div class="paso">
+                                <span class="numero-paso">02</span>
+                                <div>
+                                    <p class="titulo-paso">Brillan durante millones de años</p>
+                                    <p class="texto-paso">En su núcleo, el hidrógeno se transforma en helio.</p>
+                                </div>
+                            </div>
+                            <div class="paso">
+                                <span class="numero-paso">03</span>
+                                <div>
+                                    <p class="titulo-paso">Transforman el universo</p>
+                                    <p class="texto-paso">Según su masa, dejan enanas blancas, estrellas de neutrones o agujeros negros. Parte de su materia forma nuevas estrellas.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion">
+            <div class="caja-centrada">
+                <div class="dos-columnas invertir-movil">
+                    <div>
+                        <h2 class="titulo-seccion">Un Sol. Ocho planetas. Mucho por descubrir.</h2>
+                        <p class="texto-gris">Desde los mundos rocosos hasta los gigantes gaseosos, la gravedad del Sol mantiene unido nuestro sistema.</p>
+                        <div style="margin-top:24px">
+                            <div class="grupo-planetas">
+                                <p class="tipo-planetas">Rocosos</p>
+                                <p class="lista-planetas">Mercurio · Venus · Tierra · Marte</p>
+                            </div>
+                            <div class="grupo-planetas">
+                                <p class="tipo-planetas">Gigantes gaseosos y helados</p>
+                                <p class="lista-planetas">Júpiter · Saturno · Urano · Neptuno</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="imagen-columna">
+                        <img src="assets/img/Saturno.png" alt="Saturno">
+                        <p style="font-size:12px;color:#6B7280;margin-top:12px;text-align:center">SATURNO — Sus anillos están formados, sobre todo, por hielo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion seccion-oscura">
+            <div class="caja-centrada">
+                <h2 class="titulo-seccion">El espacio no deja de sorprender.</h2>
+                <div class="lista-caracteristicas">
+                    <div>
+                        <p class="numero-caracteristica">01</p>
+                        <h3 class="titulo-caracteristica">Galaxias</h3>
+                        <p class="texto-caracteristica">Islas de miles de millones de estrellas, gas y polvo. Nuestro hogar es una de ellas: la Vía Láctea.</p>
+                    </div>
+                    <div>
+                        <p class="numero-caracteristica">02</p>
+                        <h3 class="titulo-caracteristica">Agujeros negros</h3>
+                        <p class="texto-caracteristica">Regiones donde la gravedad es tan intensa que ni siquiera la luz puede escapar de su horizonte.</p>
+                    </div>
+                    <div>
+                        <p class="numero-caracteristica">03</p>
+                        <h3 class="titulo-caracteristica">Años luz</h3>
+                        <p class="texto-caracteristica">No miden tiempo, sino distancia: lo que recorre la luz en un año, unos 9,46 billones de kilómetros.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion">
+            <div class="caja-centrada">
+                <div class="caja-invitacion">
+                    <div>
+                        <p class="etiqueta">De la pantalla al cielo</p>
+                        <h2 class="titulo-invitacion">Tu viaje empieza con una mirada.</h2>
+                        <p class="texto-invitacion">No necesitas un telescopio para empezar. Solo curiosidad, un lugar oscuro y un poco de tiempo.</p>
+                        <p class="aviso-sol">Recuerda: nunca mires al Sol sin protección solar certificada.</p>
+                    </div>
+                    <div class="lista-caja">
+                        <div class="item-caja">
+                            <span class="numero-lista-caja">01</span>
+                            <div>
+                                <p class="titulo-item-caja">Aléjate de las luces</p>
+                                <p class="texto-item-caja">Busca un lugar seguro con el horizonte despejado.</p>
+                            </div>
+                        </div>
+                        <div class="item-caja">
+                            <span class="numero-lista-caja">02</span>
+                            <div>
+                                <p class="titulo-item-caja">Dale tiempo a tus ojos</p>
+                                <p class="texto-item-caja">Espera unos 20–30 minutos y evita las pantallas brillantes.</p>
+                            </div>
+                        </div>
+                        <div class="item-caja">
+                            <span class="numero-lista-caja">03</span>
+                            <div>
+                                <p class="titulo-item-caja">Empieza por lo reconocible</p>
+                                <p class="texto-item-caja">La Luna, un planeta brillante o una constelación sencilla.</p>
+                            </div>
+                        </div>
+                        <div class="item-caja">
+                            <span class="numero-lista-caja">04</span>
+                            <div>
+                                <p class="titulo-item-caja">Consulta un mapa del cielo</p>
+                                <p class="texto-item-caja">Lo que ves cambia según tu ubicación, la fecha y la hora.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie-pagina">
+        <div class="pie-interno">
+            <div>
+                <a href="index.html" class="logo-pie">
+                    <img src="assets/icons/LogoAkuvoid.png" alt="Akuvoid">
+                </a>
+                <p class="lema-pie">Un poco de ciencia. Un universo de curiosidad.</p>
+            </div>
+            <div class="enlaces-pie">
+                <p class="titulo-enlaces-pie">Para seguir explorando</p>
+                <div class="lista-enlaces-pie">
+                    <a href="https://science.nasa.gov" target="_blank" rel="noopener">NASA Science</a>
+                    <span>·</span>
+                    <a href="https://www.esa.int" target="_blank" rel="noopener">ESA</a>
+                    <span>·</span>
+                    <a href="https://www.iau.org" target="_blank" rel="noopener">IAU</a>
+                </div>
+                <p class="nota-pie">Una guía introductoria al cielo y al espacio.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const boton = document.getElementById("botonMenu");
+        const menu = document.getElementById("menuNav");
+
+        boton.addEventListener("click", function () {
+            menu.classList.toggle("abierto");
+        });
+    </script>
 </body>
 </html>

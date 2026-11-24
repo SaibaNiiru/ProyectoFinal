@@ -1,48 +1,900 @@
-@font-face{
-    font-family: "inter";
-    src: url("Inter-VariableFont_opsz,wght.ttf")
+@font-face {
+    font-family: Inter;
+    src: url("../assets/fonts/Inter-VariableFont_opsz,wght.ttf") format("truetype");
+    font-weight: 100 900;
 }
-
-.imagenbienvenida{
-    font-family: inter;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: #070912;
+    color: #f5f4ff;
+    font-family: Inter, Arial, sans-serif;
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+button {
+    border: 0;
+    cursor: pointer;
+    font: inherit;
+}
+.caja-centrada {
     width: 100%;
-    height: 720px;
-    background-image: url("assets\img\Nebulosa.png");
-    color: #F5F4FF;
+    max-width: 1480px;
+    margin: auto;
+    padding: 0 40px;
+}
+.seccion {
+    padding: 80px 0;
+}
+.seccion-oscura {
+    background: #0a0c16;
+}
+.titulo-seccion {
+    margin-bottom: 16px;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -1px;
+}
+.texto-gris, .texto-caracteristica, .texto-tarjeta, .texto-paso,
+.texto-portada-pagina, .texto-observar {
+    color: #a5acc3;
+}
+.texto-gris {
+    max-width: 540px;
+    font-size: 15px;
+}
+.etiqueta {
+    margin-bottom: 14px;
+    color: #a995ff;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
+.encabezado {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgba(7, 9, 18, .94);
+    border-bottom: 1px solid rgba(255,255,255,.08);
+    backdrop-filter: blur(12px);
+}
+.encabezado-interno {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1480px;
+    height: 80px;
+    margin: auto;
+    padding: 0 40px;
+}
+.logo-sitio, .logo-pie {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 22px;
+    font-weight: 700;
+}
+.logo-sitio img {
+    width: 190px;
+    max-height: 34px;
+    object-fit: contain;
+    object-position: left center;
+}
+.etiqueta-logo {
+    color: #a995ff;
+    font-size: 11px;
+    font-weight: 500;
+}
+.menu-nav {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+}
+.enlace-menu {
+    color: #a5acc3;
+    font-size: 14px;
+}
+.enlace-menu:hover, .enlace-menu.activo {
+    color: #fff;
+}
+.boton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 13px 22px;
+    border-radius: 40px;
+    font-size: 14px;
+    font-weight: 600;
+}
+.boton-morado {
+    background: #c0adff;
+    color: #0d0b1a;
+}
+.boton-morado:hover {
+    background: #d4c7ff;
+}
+.boton-borde {
+    color: #f5f4ff;
+}
+.boton-borde:hover {
+    color: #c0adff;
+}
+.boton-suave {
+    background: #18172c;
+    color: #c0adff;
+}
+.boton-suave:hover {
+    background: #25213e;
+}
+.boton-hamburguesa {
+    display: none;
+    background: none;
+}
+.boton-hamburguesa span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    margin: 5px;
+    background: white;
+}
 
-
-.container{
+.portada {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 615px;
+    overflow: hidden;
+}
+.fondo-portada {
+    position: absolute;
+    inset: 0;
+}
+.fondo-portada img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center right;
+}
+.fondo-portada::after {
+    position: absolute;
+    inset: 0;
+    content: "";
+    background: linear-gradient(90deg, #070912 0%, rgba(7,9,18,.9) 34%, rgba(7,9,18,.2) 100%);
+}
+.portada .caja-centrada {
+    position: relative;
+    z-index: 1;
+}
+.contenido-portada {
+    max-width: 650px;
+    padding: 65px 0;
+}
+.titulo-portada {
+    margin-bottom: 22px;
+    font-size: clamp(58px, 6.2vw, 84px);
+    font-weight: 600;
+    line-height: 1.08;
+    letter-spacing: -3px;
+}
+.descripcion-portada {
+    max-width: 550px;
+    margin-bottom: 34px;
+    color: #a5acc3;
+    font-size: 18px;
+}
+.botones-portada {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+.botones-portada .boton-morado {
+    min-width: 250px;
+    min-height: 58px;
+}
+.nota-portada {
+    position: absolute;
+    right: 40px;
+    bottom: 42px;
+    z-index: 1;
+    color: #b9a8ff;
+    font-size: 11px;
+    text-transform: uppercase;
+}
+.fila-datos {
     display: grid;
-    grid-template-rows: auto 1fr auto;
-    grid-template-areas: 
-        "header"
-        "main"
-        "footer";
-    height: 100vh;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    padding: 38px 0;
+    border-top: 1px solid rgba(255,255,255,.1);
+    border-bottom: 1px solid rgba(255,255,255,.1);
 }
-
-.header{
-    grid-area: header;
+.item-dato {
+    padding-right: 20px;
+    border-right: 1px solid rgba(255,255,255,.15);
+}
+.item-dato:last-child {
+    border: 0;
+}
+.numero-dato {
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+.texto-dato {
+    color: #81889e;
+    font-size: 12px;
+}
+.rejilla-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 38px;
+}
+.tarjeta {
+    padding: 22px;
+    background: #121522;
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 14px;
+}
+.img-tarjeta {
     width: 100%;
-    height: 96px;
-    background-color: #18172C;
-    color: white;
+    height: 145px;
+    margin-bottom: 18px;
+    object-fit: contain;
 }
-.nagevacion{
-    font-family: inter;
-    color: #A5ACC3;
-    
+.subtitulo-tarjeta, .tipo-planetas, .etiqueta-observar {
+    margin-bottom: 7px;
+    color: #a995ff;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
-
-.main{
-    grid-area: main;
+.titulo-tarjeta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 20px;
 }
-
-.footer{
-    grid-area: footer;
+.titulo-tarjeta span {
+    color: #a995ff;
+}
+.texto-tarjeta {
+    margin-bottom: 14px;
+    font-size: 13px;
+}
+.pie-tarjeta {
+    padding-top: 12px;
+    border-top: 1px solid rgba(255,255,255,.08);
+    color: #858ba0;
+    font-size: 10px;
+}
+.dos-columnas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 56px;
+}
+.imagen-columna {
+    overflow: hidden;
+    border-radius: 14px;
+}
+.imagen-columna img {
     width: 100%;
-    height: 150px;
-    background-color: #272C40;
+}
+.lista-pasos {
+    display: grid;
+    gap: 18px;
+    margin-top: 28px;
+}
+.paso {
+    display: flex;
+    gap: 16px;
+}
+.numero-paso, .numero-caracteristica, .numero-lista-caja {
+    color: #a995ff;
+    font-size: 11px;
+    font-weight: 600;
+}
+.titulo-paso {
+    margin-bottom: 3px;
+    font-size: 14px;
+    font-weight: 600;
+}
+.texto-paso {
+    font-size: 12px;
+}
+.grupo-planetas {
+    margin-top: 18px;
+}
+.lista-planetas {
+    color: #a5acc3;
+    font-size: 14px;
+}
+.lista-caracteristicas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 36px;
+    margin-top: 36px;
+}
+.titulo-caracteristica {
+    margin: 7px 0;
+    font-size: 18px;
+}
+.texto-caracteristica {
+    font-size: 13px;
+}
+.caja-invitacion, .caja-siguiente, .caja-aviso {
+    padding: 42px;
+    border-radius: 18px;
+    background: #c0adff;
+    color: #0d0b1a;
+}
+.caja-invitacion {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 44px;
+}
+.caja-invitacion .etiqueta, .caja-siguiente .etiqueta {
+    color: rgba(13,11,26,.55);
+}
+.titulo-invitacion {
+    margin-bottom: 12px;
+    font-size: 34px;
+    line-height: 1.2;
+}
+.texto-invitacion, .texto-siguiente {
+    margin-bottom: 18px;
+    color: rgba(13,11,26,.7);
+    font-size: 14px;
+}
+.aviso-sol {
+    display: inline-block;
+    padding: 10px 14px;
+    border-radius: 9px;
+    background: rgba(13,11,26,.1);
+    font-size: 11px;
+}
+.lista-caja {
+    display: grid;
+}
+.item-caja {
+    display: flex;
+    gap: 16px;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(13,11,26,.13);
+}
+.item-caja:last-child {
+    border: 0;
+}
+.numero-lista-caja {
+    color: rgba(13,11,26,.55);
+}
+.titulo-item-caja {
+    font-size: 14px;
+    font-weight: 600;
+}
+.texto-item-caja {
+    color: rgba(13,11,26,.65);
+    font-size: 12px;
+}
+
+.portada-pagina {
+    padding: 48px 0 60px;
+}
+.ruta-pagina {
+    margin-bottom: 25px;
+    color: #858ba0;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.rejilla-portada-pagina {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 55px;
+}
+.titulo-portada-pagina {
+    margin-bottom: 16px;
+    font-size: 48px;
+    line-height: 1.12;
+    letter-spacing: -1.5px;
+}
+.texto-portada-pagina {
+    max-width: 500px;
+    margin-bottom: 18px;
+    font-size: 15px;
+}
+.dato-portada-pagina {
+    color: #a995ff;
+    font-size: 12px;
+}
+.imagen-portada-pagina {
+    overflow: hidden;
+    border-radius: 14px;
+}
+.imagen-portada-pagina img {
+    width: 100%;
+}
+.muestra-constelacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+}
+.imagen-constelacion {
+    width: 280px;
+    height: 200px;
+    object-fit: contain;
+}
+.pie-constelacion {
+    text-align: center;
+}
+.nombre-constelacion {
+    font-size: 14px;
+}
+.desc-constelacion {
+    color: #858ba0;
+    font-size: 12px;
+}
+.tarjetas-cortas, .rejilla-observar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 32px;
+}
+.tarjeta-corta {
+    padding: 22px;
+    background: #121522;
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 13px;
+}
+.numero-tarjeta-corta {
+    margin-bottom: 10px;
+    color: #a995ff;
+    font-size: 11px;
+}
+.titulo-tarjeta-corta {
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+.texto-tarjeta-corta {
+    color: #a5acc3;
+    font-size: 13px;
+}
+.escala-colores {
+    display: flex;
+    gap: 14px;
+    margin-top: 32px;
+}
+.item-color {
+    flex: 1;
+}
+.barra-color {
+    height: 8px;
+    margin-bottom: 12px;
+    border-radius: 5px;
+}
+.nombre-color {
+    font-size: 14px;
+    font-weight: 600;
+}
+.temp-color, .nota-tabla {
+    color: #858ba0;
+    font-size: 12px;
+}
+.nota-tabla {
+    margin-top: 16px;
+}
+.lista-preguntas {
+    margin-top: 30px;
+}
+.fila-pregunta {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 24px;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+}
+.pregunta-texto {
+    font-size: 14px;
+    font-weight: 600;
+}
+.respuesta-texto {
+    color: #a5acc3;
+    font-size: 14px;
+}
+.tabla-hemisferios {
+    margin-top: 25px;
+}
+.fila-hemisferio {
+    display: grid;
+    grid-template-columns: 190px 1fr 1fr;
+    gap: 22px;
+    padding: 18px 0;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+    font-size: 13px;
+}
+.nombre-hemisferio {
+    font-weight: 600;
+}
+.lista-hemisferio {
+    color: #a5acc3;
+}
+.nota-hemisferio {
+    color: #858ba0;
+}
+.contenedor-tabla {
+    overflow-x: auto;
+    margin-top: 30px;
+}
+.tabla-planetas {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+.tabla-planetas th {
+    padding: 13px;
+    border-bottom: 1px solid rgba(255,255,255,.12);
+    color: #858ba0;
+
+    font-size: 10px;
+    text-align: left;
+    text-transform: uppercase;
+}
+.tabla-planetas td {
+    padding: 15px 13px;
+    border-bottom: 1px solid rgba(255,255,255,.07);
+    color: #a5acc3;
+}
+.tabla-planetas td:first-child {
+    color: #f5f4ff;
+
+    font-weight: 600;
+}
+.caja-siguiente {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 20px;
+}
+.titulo-siguiente {
+    margin-bottom: 8px;
+    font-size: 26px;
+}
+.texto-siguiente {
+    margin: 0;
+}
+.caja-siguiente .boton {
+    border: 1px solid rgba(13,11,26,.25);
+}
+.titulo-observar {
+    margin-bottom: 8px;
+    font-size: 19px;
+}
+.caja-aviso {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+    margin-top: 20px;
+}
+.etiqueta-aviso {
+    margin-bottom: 12px;
+    color: rgba(13,11,26,.55);
+    font-size: 11px;
+}
+.titulo-aviso {
+    font-size: 27px;
+    line-height: 1.2;
+}
+.texto-aviso {
+    margin-bottom: 12px;
+
+    color: rgba(13,11,26,.75);
+    font-size: 13px;
+}
+.datos-grandes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 35px;
+
+}
+.valor-grande {
+    color: #c0adff;
+    font-size: 34px;
+    font-weight: 600;
+
+}
+.texto-grande {
+    color: #a5acc3;
+    font-size: 13px;
+}
+.barra-guia {
+    height: 3px;
+    margin-top: 20px;
+    overflow: hidden;
+    background: rgba(255,255,255,.1);
+}
+.relleno-barra {
+    width: 33%;
+    height: 100%;
+    background: #a995ff;
+}
+.pie-guia {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 12px;
+    color: #858ba0;
+    font-size: 11px;
+}
+
+.pie-pagina {
+    padding: 38px 0;
+    border-top: 1px solid rgba(255,255,255,.08);
+}
+.pie-interno {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1480px;
+    margin: auto;
+    padding: 0 40px;
+}
+.logo-pie {
+    margin-bottom: 8px;
+}
+.logo-pie img {
+    width: 150px;
+    max-height: 28px;
+    object-fit: contain;
+    object-position: left;
+}
+.lema-pie, .nota-pie {
+    color: #858ba0;
+    font-size: 11px;
+}
+.enlaces-pie {
+    text-align: right;
+}
+.titulo-enlaces-pie {
+    margin-bottom: 8px;
+    color: #858ba0;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+.lista-enlaces-pie {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    color: #a5acc3;
+    font-size: 12px;
+}
+.nota-pie {
+    margin-top: 8px;
+}
+
+@media (max-width: 1024px) {
+    .caja-centrada, .encabezado-interno, .pie-interno {
+        padding-left: 36px;
+        padding-right: 36px;
+    }
+    .menu-nav {
+        gap: 18px;
+    }
+    .portada {
+        min-height: 550px;
+    }
+    .titulo-portada {
+        font-size: 62px;
+    }
+    .titulo-portada-pagina {
+        font-size: 40px;
+    }
+    .titulo-seccion {
+        font-size: 31px;
+    }
+    .rejilla-tarjetas {
+        gap: 12px;
+    }
+    .tarjeta {
+        padding: 17px;
+    }
+    .dos-columnas, .rejilla-portada-pagina {
+        gap: 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .caja-centrada, .encabezado-interno, .pie-interno {
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+    .encabezado-interno {
+        height: 64px;
+    }
+    .logo-sitio img {
+        width: 150px;
+    }
+    .boton-hamburguesa {
+        display: block;
+    }
+    .menu-nav {
+        display: none;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        right: 0;
+        align-items: stretch;
+        gap: 0;
+        padding: 12px 22px 22px;
+        background: #0a0c16;
+        border-bottom: 1px solid rgba(255,255,255,.1);
+    }
+    .menu-nav.abierto {
+        display: flex;
+        flex-direction: column;
+    }
+    .enlace-menu {
+        padding: 13px 0;
+        border-bottom: 1px solid rgba(255,255,255,.07);
+    }
+    .menu-nav .boton {
+        margin-top: 14px;
+    }
+    .portada {
+        min-height: 650px;
+        align-items: flex-end;
+    }
+    .fondo-portada img {
+        object-position: 60% center;
+    }
+    .fondo-portada::after {
+        background: linear-gradient(0deg, #070912 5%, rgba(7,9,18,.65) 65%, rgba(7,9,18,.2));
+    }
+    .contenido-portada {
+        padding: 55px 0 90px;
+    }
+    .titulo-portada {
+        font-size: clamp(42px, 9vw, 60px);
+        letter-spacing: -1.5px;
+    }
+    .descripcion-portada {
+        font-size: 15px;
+    }
+    .botones-portada {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 8px;
+    }
+    .nota-portada {
+        right: 22px;
+        bottom: 25px;
+    }
+    .seccion {
+        padding: 52px 0;
+    }
+    .titulo-seccion {
+        font-size: 28px;
+    }
+    .fila-datos {
+        grid-template-columns: 1fr 1fr;
+        gap: 24px 12px;
+    }
+    .item-dato {
+        border: 0;
+    }
+    .numero-dato {
+        font-size: 28px;
+    }
+    .rejilla-tarjetas, .lista-caracteristicas, .tarjetas-cortas, .rejilla-observar {
+        grid-template-columns: 1fr;
+    }
+    .dos-columnas, .rejilla-portada-pagina, .caja-invitacion, .caja-aviso {
+        grid-template-columns: 1fr;
+    }
+    .dos-columnas {
+        gap: 30px;
+    }
+    .dos-columnas.invertir-movil {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .caja-invitacion, .caja-siguiente, .caja-aviso {
+        padding: 27px 23px;
+    }
+    .titulo-invitacion {
+        font-size: 28px;
+    }
+    .portada-pagina {
+        padding: 32px 0 42px;
+    }
+    .titulo-portada-pagina {
+        font-size: 34px;
+    }
+    .rejilla-portada-pagina {
+        gap: 25px;
+    }
+    .muestra-constelacion {
+        order: -1;
+    }
+    .tarjetas-cortas, .rejilla-observar {
+        gap: 13px;
+    }
+    .escala-colores {
+        flex-direction: column;
+        gap: 14px;
+    }
+    .item-color {
+        display: grid;
+        grid-template-columns: 65px 1fr;
+        align-items: center;
+        column-gap: 12px;
+    }
+    .barra-color {
+        grid-row: span 2;
+        width: 60px;
+        margin: 0;
+    }
+    .fila-pregunta, .fila-hemisferio {
+        grid-template-columns: 1fr;
+        gap: 6px;
+    }
+    .contenedor-tabla {
+        margin-right: -22px;
+        margin-left: -22px;
+        padding: 0 22px;
+    }
+    .tabla-planetas {
+        min-width: 620px;
+    }
+    .caja-siguiente {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .datos-grandes {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .pie-interno {
+        flex-direction: column;
+    }
+    .enlaces-pie {
+        text-align: left;
+    }
+    .lista-enlaces-pie {
+        justify-content: flex-start;
+    }
+    .pie-guia {
+        flex-direction: column;
+    }
+}
+@media (max-width: 420px) {
+    .titulo-portada {
+        font-size: 39px;
+    }
+    .fila-datos {
+        grid-template-columns: 1fr 1fr;
+    }
+    .numero-dato {
+        font-size: 25px;
+    }
 }
